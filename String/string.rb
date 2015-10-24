@@ -113,7 +113,7 @@ symbol_name.intern.object_id # => 4565262
 
 
 
-#Substituting Variables into an Existing String
+#Substituting Variables into an Existing String used %
 'To 2 decimal places: %.2f' % Math::PI
 'Zero-padded: %.5d' % Math::PI
 
