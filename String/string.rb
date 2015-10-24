@@ -95,6 +95,11 @@ string # => "MY FIRST STRING"
 :AnotherSymbol.id2name # => "AnotherSymbol"
 :"Yet another symbol!".to_s # => "Yet another symbol!"
 
+#e.g.
+puts "abc".class
+puts :"abc".class
+
+
 :dodecahedron.object_id # => 4565262
 symbol_name = "dodecahedron"
 symbol_name.intern # => :dodecahedron
