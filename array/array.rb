@@ -50,13 +50,22 @@ donald_duck_nephews = Array( "Huey" "Dewey" "Louie" )
 months = %w[ nil January February March April May June July August September October November December ]
 #=>["nil", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
+#define an array that the class type of each elements is String.
 year = %w[ 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 ]
 #=> ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009"]
 year[0].class # => String
 
+
 #multiple data types in array
 hodge_podge = ["January", 1, :year, [2006,01,01]]
 hodge_podge.each {|e| print e.class, " " } # => String Fixnum Symbol Array
+
+arr = ["str",123,:abc,[1,2,3]]
+a = ""
+a = arr.each{ |e| a += e.class.to_s+" " }
+puts a # => String Fixnum Symbol Array
+
+
 
 q1 = %w[ January February March ]
 q1[0] # => January
@@ -80,9 +89,16 @@ q1.last # => March
 q1.first 2 # => ["January", "February"]
 q1.last 0 # => [] not particularly useful
 
+arr = ["str",123,:abc,[1,2,3]]
+p (arr.last 2).reverse
+# arr.last(2)==>arr.last 2
+
 # index value
 q1.index "March" # => 2
+q1.index('element')
 
+a = arr.index :abc #=>> arr.index(:abc) ruby can explain it also
+print a
 
 year = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009]
 year[0, 3] # => [2000, 2001, 2002]
