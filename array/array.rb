@@ -60,11 +60,16 @@ year[0].class # => String
 hodge_podge = ["January", 1, :year, [2006,01,01]]
 hodge_podge.each {|e| print e.class, " " } # => String Fixnum Symbol Array
 
+###########################################
 arr = ["str",123,:abc,[1,2,3]]
-a = ""
-a = arr.each{ |e| a += e.class.to_s+" " }
-puts a # => String Fixnum Symbol Array
 
+a = ""
+arr.each{ |e| a += e.class.to_s+" " }
+p a # => String Fixnum Symbol Array
+
+b = arr.map { |e| e.class.to_s+"" }
+p b
+###########################################
 
 
 q1 = %w[ January February March ]
